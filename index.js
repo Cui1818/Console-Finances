@@ -91,9 +91,33 @@ var finances = [
 
   console.log(finances.length);
 
-  var total  = 0
+  var total  = 0;
+  var average = 0;
+  var largest =0;
+  var smaller = 0;
+
 
   for(var i= 0;i < finances.length;i++){
-    console.log(finances[i]);
+    console.log(finances[i][1]);
+    total = total + finances[i][1];
+
+    if(largest < finances[i][1]){
+      largest = finances[i][1];
+       }
+      (smaller > finances[i][1]){
+      smaller = finances [i][1];
+      }
+
   }
+  console.log(" smaller " + smaller);
+  console.log(" largest " + largest);
+  console.log(" total " + total);
+   
+  average = total/finances.length -1;
+
+  console.log(" average " + average);
+
+  
+
+
 
