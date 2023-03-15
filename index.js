@@ -87,37 +87,39 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
- console.log('Financial Analysis ' + '\n' +'----------------'+'')
 
-  console.log(finances.length);
+console.log("Financial Analysis");
+console.log("-------------------------");
+
+  console.log("Total Months:" +finances.length);
 
   var total  = 0;
-  var average = 0;
+  var averageChange = 0;
   var largest =0;
-  var smaller = 0;
-
+  var least = 0;
+   
 
   for(var i= 0;i < finances.length;i++){
-    console.log(finances[i][1]);
+    
     total = total + finances[i][1];
 
     if(largest < finances[i][1]){
       largest = finances[i][1];
        }
-      (smaller > finances[i][1]){
-      smaller = finances [i][1];
+     if(least > finances[i][1]){
+      least = finances [i][1];
       }
 
   }
-  console.log(" smaller " + smaller);
-  console.log(" largest " + largest);
-  console.log(" total " + total);
-   
-  average = total/finances.length -1;
-
-  console.log(" average " + average);
-
+  console.log(" total :", "$" ,+ total);
+  console.log("Greatest Decrease in Profits/Losses  :" + "Feb-2012 " + least);
+  console.log(" Greatest Increase in Profits/Losses :" + " Sep-2013 " + largest);
   
+   
+  averageChange = averageChange - total / finances.length -1;
+
+  console.log(" average Change : -" + averageChange);
+
 
 
 
